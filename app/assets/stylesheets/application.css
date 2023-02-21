@@ -14,8 +14,29 @@
  *= require_self
  */
 
- .link {
-  color: rgb(6, 6, 97);
-  text-emphasis: bold;
-  text-decoration-line: none;
+ .container {
+margin: 2%;
+ }
+
+ .btn{
+  border-radius: 5px;
+  background-color: blanchedalmond;
+
+ }
+ .h1 {
+  color: rgb(97, 6, 54);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+ }
+
+ p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+ }
+
+ a {
+  text-decoration: none;
+  color: darkgrey
+ }
+
+ a:hover {
+  color: rgb(97, 6, 54);
  }

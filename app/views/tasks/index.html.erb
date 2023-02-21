@@ -1,12 +1,16 @@
-<h1>My tasks</h1>
+<div class="container">
+<h1 class="h1">My tasks</h1>
 
-<ul>
+<p>
   <% @tasks.each do |task| %>
-  <li > <%= link_to task.title, task_path(task) %>
+  <%= form_with model: @task do |f| %>
+  <%= f.label :"" %>
+  <%= f.check_box :completed %>
+   <%= link_to task.title, task_path(task) %>
    <%= link_to "🗑️", delete_path(task),  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-  </li>
-</li>
   <% end %>
-</ul>
+  <% end %>
+</p>
 
- <p class="link" ><%= link_to   "➕Add a new task", tasks_new_path %></p>
+ <button class="btn"> <a href="#">  <%=  link_to "➕Add a new task", tasks_new_path %></a></button>
+</div>
